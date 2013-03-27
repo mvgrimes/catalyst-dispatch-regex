@@ -16,6 +16,8 @@ has _compiled => (
 
 no Moose;
 
+our $VERSION = '5.90021';
+
 =head1 NAME
 
 Catalyst::DispatchType::Regex - Regex DispatchType

@@ -1,7 +1,7 @@
 use Test::More tests => 1;
 
 BEGIN {
-use_ok( 'Catalyst::Plugin::DispatchType::Regex' );
+use_ok( 'Catalyst::DispatchType::Regex' );
 }
 
-diag( "Testing Catalyst::Plugin::DispatchType::Regex $Catalyst::Plugin::DispatchType::Regex::VERSION" );
+diag( "Testing Catalyst::DispatchType::Regex $Catalyst::DispatchType::Regex::VERSION" );

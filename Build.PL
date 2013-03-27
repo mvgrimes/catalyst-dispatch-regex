@@ -7,9 +7,6 @@ my $builder = Module::Build->new(
     license       => 'perl',
     create_readme => 1,
 
-    # dist_author       => 'Mark Grimes <mgrimes@cpan.org>',
-    # dist_version_from => 'lib/Catalyst/DispatchType/Regex.pm',
-
     requires => { 'Catalyst::Runtime' => '5.90030', },
 
     test_requires => { 'Test::More' => 0, },
@@ -17,8 +14,8 @@ my $builder = Module::Build->new(
     meta_merge => {
         resources => {
             bugtracker =>
-              'http://rt.cpan.org/NoAuth/Bugs.html?Dist=AnyEvent-Filesys-Notify',
-            repository => 'http://github.com/mvgrimes/AnyEvent-Filesys-Notify'
+              'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Catalyst-DispatchType-Regex',
+            repository => 'http://github.com/mvgrimes/catalyst-dispatch-regex'
         }
     },
 

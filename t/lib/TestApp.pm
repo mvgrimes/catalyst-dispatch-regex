@@ -2,7 +2,6 @@ package TestApp;
 use strict;
 use Catalyst qw/
     Test::Headers
-    DispatchType::Regex
 /;
 use Catalyst::Utils;
 
