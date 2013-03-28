@@ -23,7 +23,7 @@ sub three : Action LocalRegex('^(mandatory)(/optional)?$'){
     $c->forward('TestApp::View::Dump::Request');
 }
 
-sub four : Action Regex('^action/regexp/redirect/(\w+)/universe/(\d+)/everything$') {
+sub four : Action Regexp('^action/regexp/redirect/(\w+)/universe/(\d+)/everything$') {
     my ( $self, $c ) = @_;
     $c->res->redirect(
         $c->uri_for($c->action, $c->req->captures,

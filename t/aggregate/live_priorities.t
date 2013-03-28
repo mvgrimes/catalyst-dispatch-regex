@@ -6,7 +6,7 @@ use warnings;
 use FindBin;
 use lib "$FindBin::Bin/../lib";
 
-use Test::More tests => 14;
+use Test::More tests => 12;
 use Catalyst::Test 'TestApp';
 
 local $^W = 0;
@@ -16,7 +16,9 @@ my @tests = (
 
     #   Simple
     'Regex vs. Local',      { path => '/re_vs_loc',      expect => 'local' },
-    'Regex vs. LocalRegex', { path => '/re_vs_locre',    expect => 'regex' },
+    # 'Regex vs. LocalRegex', { path => '/re_vs_locre',    expect => 'regex' },
+    # After refactoring, priorities depend on the order the DispatchType
+    # (Regex/Regexp/LocalRegex/LocalRegexp) is found in the controllers.
     'Regex vs. Path',       { path => '/re_vs_path',     expect => 'path' },
     'Local vs. LocalRegex', { path => '/loc_vs_locre',   expect => 'local' },
     'Path  vs. LocalRegex', { path => '/path_vs_locre',  expect => 'path' },

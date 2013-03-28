@@ -1,0 +1,49 @@
+package Catalyst::DispatchType::Regexp;
+
+use Moose;
+extends 'Catalyst::DispatchType::Regex';
+has '+_attr' => ( default => 'Regexp' );
+no Moose;
+
+=head1 NAME
+
+Catalyst::DispatchType::Regexp - Regex DispatchType
+
+=head1 SYNOPSIS
+
+See L<Catalyst::DispatchType::Regex>.
+
+=head1 DESCRIPTION
+
+B<Status: Deprecated.> Regex dispatch types have been depreciated and removed
+from Catalyst core. It is recommend that you use Chained methods or other
+techniques instead. As part of the refactoring, the dispatch priority of
+Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now
+influenced by when the dispatch type is first seen in your application.
+
+Dispatch type managing path-matching behaviour using regexes. This simply
+supports the alternate spelling of C<Regex>. All the work is done in
+L<Catalyst::DispatchType::Regex>.  For more information on dispatch types, see:
+
+=over 4
+
+=item * L<Catalyst::Manual::Intro> for how they affect application authors
+
+=item * L<Catalyst::DispatchType> for implementation information.
+
+=back
+
+=head1 AUTHORS
+
+Catalyst Contributors, see Catalyst.pm
+
+=head1 COPYRIGHT
+
+This library is free software. You can redistribute it and/or modify it under
+the same terms as Perl itself.
+
+=cut
+
+__PACKAGE__->meta->make_immutable;
+
+1;

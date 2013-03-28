@@ -13,7 +13,12 @@ has _compiled => (
                   required => 1,
                   default => sub{ [] },
                  );
-
+has _attr => (
+                  is => 'ro',
+                  isa => 'Str',
+                  required => 1,
+                  default => 'Regex',
+             );
 no Moose;
 
 our $VERSION = '5.90021';
@@ -27,6 +32,12 @@ Catalyst::DispatchType::Regex - Regex DispatchType
 See L<Catalyst::DispatchType>.
 
 =head1 DESCRIPTION
+
+B<Status: Deprecated.> Regex dispatch types have been depreciated and removed
+from Catalyst core. It is recommend that you use Chained methods or other
+techniques instead. As part of the refactoring, the dispatch priority of
+Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now
+influenced by when the dispatch type is first seen in your application.
 
 Dispatch type managing path-matching behaviour using regexes.  For
 more information on dispatch types, see:
@@ -53,7 +64,7 @@ sub list {
     my $col1_width = ($avail_width * .50) < 35 ? 35 : int($avail_width * .50);
     my $col2_width = $avail_width - $col1_width;
     my $re = Text::SimpleTable->new(
-        [ $col1_width, 'Regex' ], [ $col2_width, 'Private' ]
+        [ $col1_width, $self->_attr ], [ $col2_width, 'Private' ]
     );
     for my $regex ( @{ $self->_compiled } ) {
         my $action = $regex->{action};
@@ -104,16 +115,7 @@ Returns 1 if any regexps were registered.
 
 sub register {
     my ( $self, $c, $action ) = @_;
-    my $attrs    = $action->attributes;
-
-    my @register = ( @{ $attrs->{'Regex'}  || [] },
-                     @{ $attrs->{'Regexp'} || [] },  );
-
-    # Add the LocalRegexes after adding the local prefix
-    push @register,
-        map { $self->_parse_LocalRegex_attr( $c, $action, $_ ) }
-        @{ $attrs->{'LocalRegex'}  || [] },
-        @{ $attrs->{'LocalRegexp'} || [] };
+    my @register = $self->_get_attributes( $c, $action );
 
     foreach my $r (@register) {
         $self->register_path( $c, $r, $action );
@@ -122,6 +124,13 @@ sub register {
 
     return 1 if @register;
     return 0;
+}
+
+sub _get_attributes {
+    my ($self, $c, $action) = @_;
+    my $attrs    = $action->attributes;
+    my $attr     = $self->_attr;
+    return @{ $attrs->{$attr}  || [] };
 }
 
 =head2 $self->register_regex($c, $re, $action)
@@ -155,7 +164,8 @@ need to pass the first and third captures only.
 sub uri_for_action {
     my ( $self, $action, $captures ) = @_;
 
-    if (my $regexes = $action->attributes->{Regex}) {
+    my $attr = $self->_attr;
+    if (my $regexes = $action->attributes->{$attr}) {
         REGEX: foreach my $orig (@$regexes) {
             my $re = "$orig";
             $re =~ s/^\^//;
@@ -176,16 +186,6 @@ sub uri_for_action {
          }
     }
     return undef;
-}
-
-sub _parse_LocalRegex_attr {
-    my ( $self, $c, $action, $value ) = @_;
-    unless ( $value =~ s/^\^// ) { $value = "(?:.*?)$value"; }
-
-    my $prefix = $action->namespace();
-    $prefix .= '/' if length( $prefix );
-
-    return "^${prefix}${value}";
 }
 
 =head1 AUTHORS
