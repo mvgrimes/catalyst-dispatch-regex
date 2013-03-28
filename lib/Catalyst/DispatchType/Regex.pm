@@ -21,7 +21,9 @@ has _attr => (
              );
 no Moose;
 
-our $VERSION = '5.90021';
+# Version needs to be in a format such that $VERSION gt '5.90020' => true
+# We use in Catalyst::Dispatcher ($VERSION le '5.90020')
+our $VERSION = '5.90020_1';
 
 =head1 NAME
 
