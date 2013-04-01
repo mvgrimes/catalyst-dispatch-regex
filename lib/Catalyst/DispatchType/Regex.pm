@@ -117,6 +117,9 @@ Returns 1 if any regexps were registered.
 
 sub register {
     my ( $self, $c, $action ) = @_;
+
+    $self->_display_depreciation_warning;
+
     my @register = $self->_get_attributes( $c, $action );
 
     foreach my $r (@register) {
@@ -188,6 +191,22 @@ sub uri_for_action {
          }
     }
     return undef;
+}
+
+{
+    my $depreciation_warning_displayed = 0;
+
+    sub _display_depreciation_warning {
+        return if $depreciation_warning_displayed++;
+
+        warn "DEPRECIATION WARNING: The Regex dispatch type is depreciated.\n"
+           . "  The standalone Catalyst::DispatchType::Regex distribution\n"
+           . "  has been temporarily included as a prerequisite of\n"
+           . "  Catalyst::Runtime, but will be dropped in the future. Convert\n"
+           . "  to Chained methods or include Catalyst::DispatchType::Regex\n"
+           . "  as a prerequisite for your application.\n";
+    }
+
 }
 
 =head1 AUTHORS
