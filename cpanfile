@@ -5,3 +5,7 @@ requires 'Catalyst::Utils';
 requires 'Text::Balanced';
 
 test_requires 'Test::More';
+test_requires 'MRO::Compat';
+test_requires 'Data::Dumper';
+test_requires 'Scalar::Util';
+test_requires 'namespace::autoclean';

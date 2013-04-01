@@ -4,7 +4,7 @@
       "Mark Grimes <mgrimes@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Milla version v0.9.3, Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Milla version v0.9.3, Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.130880",
    "license" : [
       "perl_5"
    ],
@@ -45,7 +45,11 @@
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0"
+            "Data::Dumper" : "0",
+            "MRO::Compat" : "0",
+            "Scalar::Util" : "0",
+            "Test::More" : "0",
+            "namespace::autoclean" : "0"
          }
       }
    },
