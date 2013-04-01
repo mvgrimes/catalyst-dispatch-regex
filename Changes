@@ -1,6 +1,8 @@
 Revision history for Catalyst-DispatchType-Regex
 
 {{$NEXT}}
+
+5.90021  2013-04-01 14:46:01 EDT
     Initial release of standalone Catalyst-DispatchType-Regex
 
     The Regex dispatch types have been depreciated and removed from
