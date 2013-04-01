@@ -1,0 +1,66 @@
+{
+   "abstract" : "Regex DispatchType",
+   "author" : [
+      "Mark Grimes <mgrimes@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Milla version v0.9.3, Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Catalyst-DispatchType-Regex",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.013"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::Pod" : "1.41"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Catalyst::Runtime" : "5.90030",
+            "Catalyst::Utils" : "0",
+            "Moose" : "0",
+            "Text::Balanced" : "0",
+            "Text::SimpleTable" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/mvgrimes/catalyst-dispatch-regex/issues"
+      },
+      "homepage" : "https://github.com/mvgrimes/catalyst-dispatch-regex",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/mvgrimes/catalyst-dispatch-regex.git",
+         "web" : "https://github.com/mvgrimes/catalyst-dispatch-regex"
+      }
+   },
+   "version" : "5.90021"
+}
+

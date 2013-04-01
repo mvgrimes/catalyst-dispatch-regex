@@ -1,8 +1,8 @@
 .*.swp
-.build
+/.build
 
 META.yml
-META.json
+!META.json
 MYMETA.yml
 MYMETA.json
 blib/
@@ -12,7 +12,7 @@ pm_to_blib
 dist.ini
 MANIFEST
 MANIFEST.bak
-Catalyst-Plugin-Dispatch-Regex
+/Catalyst-DispatchType-Regex*
 exp/
 tmp/
 Changes.bak
