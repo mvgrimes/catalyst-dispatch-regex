@@ -1,6 +1,5 @@
-
-- Update CPDR documentation
-- Update Catalyst-Runtime documentation
 - Update Catalyst manual
-- Test on upgraded installation
-- Add depreciation warning to Catalyst-Runtime
+x Update CPDR documentation
+x Update Catalyst-Runtime documentation
+x Test on upgraded installation
+x Add depreciation warning to Catalyst-Runtime

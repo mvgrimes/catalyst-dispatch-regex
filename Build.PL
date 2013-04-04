@@ -7,9 +7,24 @@ my $builder = Module::Build->new(
     license       => 'perl',
     create_readme => 1,
 
-    requires => { 'Catalyst::Runtime' => '5.90030', },
+    requires => {
+        'Catalyst::Runtime' => '5.90030',
+        'Catalyst::Runtime' => '5.90030',
+        'Catalyst::Utils'   => '0',
+        'Moose'             => '0',
+        'Text::Balanced'    => '0',
+        'Text::SimpleTable' => '0'
+    },
+    configure_requires => { 'Module::Build' => '0.4004' },
 
-    test_requires => { 'Test::More' => 0, },
+    test_requires => {
+        'Test::More'           => 0,
+        'Data::Dumper'         => '0',
+        'MRO::Compat'          => '0',
+        'Scalar::Util'         => '0',
+        'Test::More'           => '0',
+        'namespace::autoclean' => '0'
+    },
 
     meta_merge => {
         resources => {
