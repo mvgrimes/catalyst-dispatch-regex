@@ -38,13 +38,13 @@
       },
       "Catalyst::DispatchType::Regex" : {
          "file" : "lib/Catalyst/DispatchType/Regex.pm",
-         "version" : "5.90020_1"
+         "version" : "5.90030"
       },
       "Catalyst::DispatchType::Regexp" : {
          "file" : "lib/Catalyst/DispatchType/Regexp.pm"
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=Catalyst-DispatchType-Regex"
@@ -56,7 +56,7 @@
          "url" : "http://github.com/mvgrimes/catalyst-dispatch-regex"
       }
    },
-   "version" : "5.90020_1",
+   "version" : "5.90030",
    "x_test_requires" : {
       "Data::Dumper" : "0",
       "MRO::Compat" : "0",

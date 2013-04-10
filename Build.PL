@@ -16,7 +16,6 @@ my $builder = Module::Build->new(
         'Text::SimpleTable' => '0'
     },
     configure_requires => { 'Module::Build' => '0.4004' },
-
     test_requires => {
         'Test::More'           => 0,
         'Data::Dumper'         => '0',
@@ -25,6 +24,8 @@ my $builder = Module::Build->new(
         'Test::More'           => '0',
         'namespace::autoclean' => '0'
     },
+
+    recursive_test_files => 1,
 
     meta_merge => {
         resources => {
