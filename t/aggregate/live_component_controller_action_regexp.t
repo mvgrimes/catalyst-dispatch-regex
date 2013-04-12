@@ -10,9 +10,21 @@ our $iters;
 
 BEGIN { $iters = $ENV{CAT_BENCH_ITERS} || 1; }
 
-use Test::More tests => 39*$iters;
-use Catalyst::Test 'TestApp';
+use Test::More;
+# This kludge is necessary to avoid failing due to circular dependencies
+# with Catalyst-Runtime. Not ideal, but until we remove CDR from
+# Catalyst-Runtime prereqs, this is necessary to avoid Catalyst-Runtime build
+# failing.
+BEGIN {
+    eval qq{use Catalyst::Runtime 5.90030;};
+    if( $@ ){
+        use Test::More skip_all => 'Test require Catalyst::Runtime 5.90030';
+        exit;
+    }
+    plan tests => 39*$iters;
+}
 
+use Catalyst::Test 'TestApp';
 use Catalyst::Request;
 
 if ( $ENV{CAT_BENCHMARK} ) {

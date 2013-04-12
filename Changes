@@ -1,5 +1,15 @@
 Revision history for Catalyst-DispatchType-Regex
 
+5.90031 - Fri Apr 12 18:49:56 EDT 2013
+    Makes tests conditional on having Catalyst::Runtime 5.90030 installed
+
+    To ease the depreciation process Catalyst::Runtime is including
+    Catalyst::DispatchType::Regex as a requirement for a period of time.
+    This causes a circular dependency. The installers seem to be smart
+    enough to deal with the circular dependency, but the CDR tests fail
+    because Catalyst::Runtime 5.90030 isn't installed. The test will be
+    re-enabled once the requirement has been removed from Catalyst::Runtime.
+
 5.90030 - Wed Apr 10 10:04:59 EDT 2013
     Initial release of standalone Catalyst-DispatchType-Regex
 
