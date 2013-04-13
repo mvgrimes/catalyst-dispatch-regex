@@ -11,8 +11,8 @@ my $builder = Module::Build->new(
         ## Can't require Catalyst::Runtime right now as it creates a
         ## circular dependency. Will add this back in when CDR is removed
         ## as a dependency of CR.
-        'Catalyst::Runtime' => '5.90030',
-        'Catalyst::Utils'   => '0',
+        ## 'Catalyst::Runtime' => '5.90030',
+        ## 'Catalyst::Utils'   => '0',
         'Moose'             => '0',
         'Text::Balanced'    => '0',
         'Text::SimpleTable' => '0'

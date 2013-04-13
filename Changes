@@ -1,5 +1,14 @@
 Revision history for Catalyst-DispatchType-Regex
 
+5.90032 - Fri Apr 12 22:44:58 EDT 2013
+    Removes Catalyst-Runtime as a dependency
+
+    While some cpan clients can handle circular dependencies, apparently not
+    all of them can. Of course, it is hard to imagine anyone installing this
+    without already having Catalyst installed, so dropping the Catalyst
+    requirement is unlikely to cause any real problems other than limiting
+    the automated testing.
+
 5.90031 - Fri Apr 12 18:49:56 EDT 2013
     Makes tests conditional on having Catalyst::Runtime 5.90030 installed
 

@@ -21,8 +21,6 @@
       },
       "runtime" : {
          "requires" : {
-            "Catalyst::Runtime" : "5.90030",
-            "Catalyst::Utils" : "0",
             "Moose" : "0",
             "Text::Balanced" : "0",
             "Text::SimpleTable" : "0"
@@ -38,7 +36,7 @@
       },
       "Catalyst::DispatchType::Regex" : {
          "file" : "lib/Catalyst/DispatchType/Regex.pm",
-         "version" : "5.90031"
+         "version" : "5.90032"
       },
       "Catalyst::DispatchType::Regexp" : {
          "file" : "lib/Catalyst/DispatchType/Regexp.pm"
@@ -56,7 +54,7 @@
          "url" : "http://github.com/mvgrimes/catalyst-dispatch-regex"
       }
    },
-   "version" : "5.90031",
+   "version" : "5.90032",
    "x_test_requires" : {
       "Data::Dumper" : "0",
       "MRO::Compat" : "0",
