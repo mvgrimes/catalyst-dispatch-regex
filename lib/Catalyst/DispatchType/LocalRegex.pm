@@ -20,6 +20,10 @@ techniques instead. As part of the refactoring, the dispatch priority of
 Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now
 influenced by when the dispatch type is first seen in your application.
 
+When loaded, a warning about the deprecation will be printed to STDERR. To
+suppress the warning set the CATALYST_NOWARN_DEPRECATE environment variable to
+a true value.
+
 Dispatch type managing path-matching behaviour using regexes.  For
 more information on dispatch types, see:
 

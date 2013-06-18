@@ -41,6 +41,10 @@ techniques instead. As part of the refactoring, the dispatch priority of
 Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now
 influenced by when the dispatch type is first seen in your application.
 
+When loaded, a warning about the deprecation will be printed to STDERR. To
+suppress the warning set the CATALYST_NOWARN_DEPRECATE environment variable to
+a true value.
+
 Dispatch type managing path-matching behaviour using regexes.  For
 more information on dispatch types, see:
 
@@ -198,6 +202,7 @@ sub uri_for_action {
 
     sub _display_deprecation_warning {
         return if $deprecation_warning_displayed++;
+        return if $ENV{CATALYST_NOWARN_DEPRECATE};
 
         warn "DEPRECATION WARNING: The Regex dispatch type is deprecated.\n"
            . "  The standalone Catalyst::DispatchType::Regex distribution\n"
