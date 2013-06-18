@@ -8,11 +8,15 @@ See [Catalyst::DispatchType](http://search.cpan.org/perldoc?Catalyst::DispatchTy
 
 # DESCRIPTION
 
-__Status: Deprecated.__ Regex dispatch types have been depreciated and removed
+__Status: Deprecated.__ Regex dispatch types have been deprecated and removed
 from Catalyst core. It is recommend that you use Chained methods or other
 techniques instead. As part of the refactoring, the dispatch priority of
 Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now
 influenced by when the dispatch type is first seen in your application.
+
+When loaded, a warning about the deprecation will be printed to STDERR. To
+suppress the warning set the CATALYST\_NOWARN\_DEPRECATE environment variable to
+a true value.
 
 Dispatch type managing path-matching behaviour using regexes.  For
 more information on dispatch types, see:

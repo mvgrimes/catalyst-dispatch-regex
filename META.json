@@ -36,7 +36,7 @@
       },
       "Catalyst::DispatchType::Regex" : {
          "file" : "lib/Catalyst/DispatchType/Regex.pm",
-         "version" : "5.90032"
+         "version" : "5.90033"
       },
       "Catalyst::DispatchType::Regexp" : {
          "file" : "lib/Catalyst/DispatchType/Regexp.pm"
@@ -54,7 +54,7 @@
          "url" : "http://github.com/mvgrimes/catalyst-dispatch-regex"
       }
    },
-   "version" : "5.90032",
+   "version" : "5.90033",
    "x_test_requires" : {
       "Data::Dumper" : "0",
       "MRO::Compat" : "0",

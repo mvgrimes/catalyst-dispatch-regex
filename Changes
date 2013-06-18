@@ -1,5 +1,10 @@
 Revision history for Catalyst-DispatchType-Regex
 
+5.90033 - Tue Jun 18 14:20:48 EDT 2013
+    - Fixes spelling of deprecation.
+    - Improves skips in tests.
+    - Adds env flag to suppress the deprecation warning message.
+
 5.90032 - Fri Apr 12 22:44:58 EDT 2013
     Removes Catalyst-Runtime as a dependency
 

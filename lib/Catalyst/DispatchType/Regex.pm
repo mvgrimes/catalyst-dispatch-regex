@@ -23,7 +23,7 @@ no Moose;
 
 # Version needs to be in a format such that $VERSION gt '5.90020' => true
 # We use in Catalyst::Dispatcher ($VERSION le '5.90020')
-our $VERSION = '5.90032';
+our $VERSION = '5.90033';
 
 =head1 NAME
 
