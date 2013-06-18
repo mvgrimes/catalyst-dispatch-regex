@@ -15,7 +15,7 @@ See L<Catalyst::DispatchType>.
 
 =head1 DESCRIPTION
 
-B<Status: Deprecated.> Regex dispatch types have been depreciated and removed
+B<Status: Deprecated.> Regex dispatch types have been deprecated and removed
 from Catalyst core. It is recommend that you use Chained methods or other
 techniques instead. As part of the refactoring, the dispatch priority of
 Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now

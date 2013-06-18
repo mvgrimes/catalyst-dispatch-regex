@@ -35,7 +35,7 @@ See L<Catalyst::DispatchType>.
 
 =head1 DESCRIPTION
 
-B<Status: Deprecated.> Regex dispatch types have been depreciated and removed
+B<Status: Deprecated.> Regex dispatch types have been deprecated and removed
 from Catalyst core. It is recommend that you use Chained methods or other
 techniques instead. As part of the refactoring, the dispatch priority of
 Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now
@@ -118,7 +118,7 @@ Returns 1 if any regexps were registered.
 sub register {
     my ( $self, $c, $action ) = @_;
 
-    $self->_display_depreciation_warning;
+    $self->_display_deprecation_warning;
 
     my @register = $self->_get_attributes( $c, $action );
 
@@ -194,12 +194,12 @@ sub uri_for_action {
 }
 
 {
-    my $depreciation_warning_displayed = 0;
+    my $deprecation_warning_displayed = 0;
 
-    sub _display_depreciation_warning {
-        return if $depreciation_warning_displayed++;
+    sub _display_deprecation_warning {
+        return if $deprecation_warning_displayed++;
 
-        warn "DEPRECIATION WARNING: The Regex dispatch type is depreciated.\n"
+        warn "DEPRECATION WARNING: The Regex dispatch type is deprecated.\n"
            . "  The standalone Catalyst::DispatchType::Regex distribution\n"
            . "  has been temporarily included as a prerequisite of\n"
            . "  Catalyst::Runtime, but will be dropped in the future. Convert\n"

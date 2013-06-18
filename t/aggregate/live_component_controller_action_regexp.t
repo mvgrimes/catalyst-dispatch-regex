@@ -16,11 +16,9 @@ use Test::More;
 # Catalyst-Runtime prereqs, this is necessary to avoid Catalyst-Runtime build
 # failing.
 BEGIN {
-    eval qq{use Catalyst::Runtime 5.90030;};
-    if( $@ ){
-        use Test::More skip_all => 'Test require Catalyst::Runtime 5.90030';
-        exit;
-    }
+    plan skip_all => 'Catalyst::Runtime required'
+        unless eval { require Catalyst };
+    plan skip_all => 'Test requires Catalyst::Runtime >= 5.90030' unless $Catalyst::VERSION >= 5.90030;
     plan tests => 39*$iters;
 }
 
