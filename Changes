@@ -1,5 +1,14 @@
 Revision history for Catalyst-DispatchType-Regex
 
+5.90034 - Tue Mar 31 09:47:32 EDT 2015
+    Adds Catalyst::Runtime to list of prereqs.
+    -  Catalyst::Runtime was not previously included as  prereq as it caused
+       circular dependencies. As of v5.90060, Catalyst::Runtime no longer
+       includes this module as a prereq. Since that was released 14 months ago,
+       it should be relatively safe to include Catalyst::Runtime as a prereq.
+    Adds travis.ci integration.
+    [No code changes. No need to upgrade.]
+
 5.90033 - Tue Jun 18 14:20:48 EDT 2013
     - Fixes spelling of deprecation.
     - Improves skips in tests.

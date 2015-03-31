@@ -2,13 +2,18 @@
 
 Catalyst::DispatchType::Regex - Regex DispatchType
 
+<div>
+
+    <a href="https://travis-ci.org/mvgrimes/catalyst-dispatch-regex"><img src="https://travis-ci.org/mvgrimes/catalyst-dispatch-regex.svg?branch=master" alt="Build Status"></a>
+</div>
+
 # SYNOPSIS
 
-See [Catalyst::DispatchType](http://search.cpan.org/perldoc?Catalyst::DispatchType).
+See [Catalyst::DispatchType](https://metacpan.org/pod/Catalyst::DispatchType).
 
 # DESCRIPTION
 
-__Status: Deprecated.__ Regex dispatch types have been deprecated and removed
+**Status: Deprecated.** Regex dispatch types have been deprecated and removed
 from Catalyst core. It is recommend that you use Chained methods or other
 techniques instead. As part of the refactoring, the dispatch priority of
 Regex vs Regexp vs LocalRegex vs LocalRegexp may have changed. Priority is now
@@ -21,8 +26,8 @@ a true value.
 Dispatch type managing path-matching behaviour using regexes.  For
 more information on dispatch types, see:
 
-- [Catalyst::Manual::Intro](http://search.cpan.org/perldoc?Catalyst::Manual::Intro) for how they affect application authors
-- [Catalyst::DispatchType](http://search.cpan.org/perldoc?Catalyst::DispatchType) for implementation information.
+- [Catalyst::Manual::Intro](https://metacpan.org/pod/Catalyst::Manual::Intro) for how they affect application authors
+- [Catalyst::DispatchType](https://metacpan.org/pod/Catalyst::DispatchType) for implementation information.
 
 # METHODS
 

@@ -8,7 +8,7 @@ my $builder = Module::Build->new(
     create_readme => 1,
 
     requires => {
-        'Catalyst::Runtime' => '5.90030',
+        'Catalyst::Runtime' => '5.90060',    # ::Regex was removed as a prereq
         'Moose'             => '0',
         'Text::Balanced'    => '0',
         'Text::SimpleTable' => '0'

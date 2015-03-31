@@ -23,11 +23,14 @@ no Moose;
 
 # Version needs to be in a format such that $VERSION gt '5.90020' => true
 # We use in Catalyst::Dispatcher ($VERSION le '5.90020')
-our $VERSION = '5.90033';
+our $VERSION = '5.90034';
 
 =head1 NAME
 
 Catalyst::DispatchType::Regex - Regex DispatchType
+
+=for html
+<a href="https://travis-ci.org/mvgrimes/catalyst-dispatch-regex"><img src="https://travis-ci.org/mvgrimes/catalyst-dispatch-regex.svg?branch=master" alt="Build Status"></a>
 
 =head1 SYNOPSIS
 
