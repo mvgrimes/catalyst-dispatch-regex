@@ -23,7 +23,7 @@ no Moose;
 
 # Version needs to be in a format such that $VERSION gt '5.90020' => true
 # We use in Catalyst::Dispatcher ($VERSION le '5.90020')
-our $VERSION = '5.90034';
+our $VERSION = '5.90035';
 
 =head1 NAME
 
@@ -208,11 +208,8 @@ sub uri_for_action {
         return if $ENV{CATALYST_NOWARN_DEPRECATE};
 
         warn "DEPRECATION WARNING: The Regex dispatch type is deprecated.\n"
-           . "  The standalone Catalyst::DispatchType::Regex distribution\n"
-           . "  has been temporarily included as a prerequisite of\n"
-           . "  Catalyst::Runtime, but will be dropped in the future. Convert\n"
-           . "  to Chained methods or include Catalyst::DispatchType::Regex\n"
-           . "  as a prerequisite for your application.\n";
+          . "  It is recommended that you convert Regex and LocalRegex \n"
+          . "  methods to Chained methods.";
     }
 
 }

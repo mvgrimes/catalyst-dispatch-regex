@@ -1,5 +1,10 @@
 Revision history for Catalyst-DispatchType-Regex
 
+5.90035 - Tue Mar 31 09:57:18 EDT 2015
+    Updates the deprecation message to reflect the fact that this module
+    has been dropped from Catalyst::Runtime.
+    [No meaningful code changes. No need to upgrade.]
+
 5.90034 - Tue Mar 31 09:47:32 EDT 2015
     Adds Catalyst::Runtime to list of prereqs.
     -  Catalyst::Runtime was not previously included as  prereq as it caused
