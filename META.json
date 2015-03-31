@@ -21,6 +21,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Catalyst::Runtime" : "5.90030",
             "Moose" : "0",
             "Text::Balanced" : "0",
             "Text::SimpleTable" : "0"

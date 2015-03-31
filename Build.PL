@@ -8,17 +8,13 @@ my $builder = Module::Build->new(
     create_readme => 1,
 
     requires => {
-        ## Can't require Catalyst::Runtime right now as it creates a
-        ## circular dependency. Will add this back in when CDR is removed
-        ## as a dependency of CR.
-        ## 'Catalyst::Runtime' => '5.90030',
-        ## 'Catalyst::Utils'   => '0',
+        'Catalyst::Runtime' => '5.90030',
         'Moose'             => '0',
         'Text::Balanced'    => '0',
         'Text::SimpleTable' => '0'
     },
     configure_requires => { 'Module::Build' => '0.4004' },
-    test_requires => {
+    test_requires      => {
         'Test::More'           => '0',
         'Data::Dumper'         => '0',
         'MRO::Compat'          => '0',
